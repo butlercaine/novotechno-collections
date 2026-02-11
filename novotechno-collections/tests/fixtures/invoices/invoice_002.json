@@ -1,0 +1,12 @@
+{
+  "invoice_number": "FACT-2024-005",
+  "client_name": "TechStart Inc",
+  "amount": 2500.5,
+  "due_date": "2024-04-01",
+  "items": [
+    {"description": "Web Development", "quantity": 20, "price": 100.0}
+  ],
+  "confidence": 0.92,
+  "expected_route": "review",
+  "pdf_content": "Factura #: FACT-2024-005\\nClient:\\nTechStart Inc\\nMonto: $2,500.50\\nFecha de Vencimiento: 01/04/2024"
+}

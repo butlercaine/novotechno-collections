@@ -1,0 +1,1 @@
+# Collections module for novotechno-collections

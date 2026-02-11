@@ -1,0 +1,10 @@
+{
+  "invoice_number": "AB-12345",
+  "client_name": "Global Services LLC",
+  "amount": 875.25,
+  "due_date": "2024-02-28",
+  "items": [],
+  "confidence": 0.88,
+  "expected_route": "review",
+  "pdf_content": "Document: AB-12345\\nTo:\\nGlobal Services LLC\\nTotal: 875.25 USD\\nDue Date: 28/02/2024"
+}

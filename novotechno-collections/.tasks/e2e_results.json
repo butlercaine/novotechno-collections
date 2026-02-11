@@ -1,0 +1,78 @@
+{
+  "test_name": "E2E Integration Testing",
+  "start_time": "2026-02-11T18:21:31.732556",
+  "scenarios": [
+    {
+      "name": "Full Payment Cycle",
+      "passed": false,
+      "duration_seconds": 0.13364195823669434,
+      "exit_code": 4,
+      "error": "ERROR: found no collectors for /Users/caine/Projects/PROJ-2026-0210-novotechno-collections/novotechno-collections/tests/test_e2e.py::TestFullPaymentCycle::test_full_cycle_invoice_to_archive\n\n"
+    },
+    {
+      "name": "OAuth Failure Handling",
+      "passed": false,
+      "duration_seconds": 0.1737818717956543,
+      "exit_code": 4,
+      "error": "ERROR: found no collectors for /Users/caine/Projects/PROJ-2026-0210-novotechno-collections/novotechno-collections/tests/test_e2e.py::TestFullPaymentCycle::test_error_handling_oauth_failure\n\n"
+    },
+    {
+      "name": "PDF Parse Failure",
+      "passed": false,
+      "duration_seconds": 0.16884779930114746,
+      "exit_code": 4,
+      "error": "ERROR: found no collectors for /Users/caine/Projects/PROJ-2026-0210-novotechno-collections/novotechno-collections/tests/test_e2e.py::TestFullPaymentCycle::test_error_handling_pdf_parse_failure\n\n"
+    },
+    {
+      "name": "Permission Denied",
+      "passed": false,
+      "duration_seconds": 0.17320895195007324,
+      "exit_code": 4,
+      "error": "ERROR: found no collectors for /Users/caine/Projects/PROJ-2026-0210-novotechno-collections/novotechno-collections/tests/test_e2e.py::TestFullPaymentCycle::test_permission_denied_handling\n\n"
+    },
+    {
+      "name": "Crash Recovery",
+      "passed": false,
+      "duration_seconds": 0.1714649200439453,
+      "exit_code": 4,
+      "error": "ERROR: found no collectors for /Users/caine/Projects/PROJ-2026-0210-novotechno-collections/novotechno-collections/tests/test_e2e.py::TestFullPaymentCycle::test_supervisor_recovery_after_crash\n\n"
+    },
+    {
+      "name": "Rate Limit Respect",
+      "passed": false,
+      "duration_seconds": 0.17120790481567383,
+      "exit_code": 4,
+      "error": "ERROR: found no collectors for /Users/caine/Projects/PROJ-2026-0210-novotechno-collections/novotechno-collections/tests/test_e2e.py::TestFullPaymentCycle::test_rate_limit_respect\n\n"
+    },
+    {
+      "name": "Payment Detection Latency",
+      "passed": false,
+      "duration_seconds": 0.17053818702697754,
+      "type": "performance"
+    },
+    {
+      "name": "State Update Latency",
+      "passed": false,
+      "duration_seconds": 0.12909889221191406,
+      "type": "performance"
+    },
+    {
+      "name": "Supervisor Check Duration",
+      "passed": false,
+      "duration_seconds": 0.1253221035003662,
+      "type": "performance"
+    }
+  ],
+  "env": {
+    "python": "3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.6.3.2)]",
+    "cwd": "/Users/caine/Projects/PROJ-2026-0210-novotechno-collections/novotechno-collections"
+  },
+  "summary": {
+    "total": 9,
+    "passed": 0,
+    "failed": 6,
+    "completion_time": "2026-02-11T18:21:36.779379",
+    "total_duration_seconds": 1.4171125888824463,
+    "success_rate": "0/9 (0.0%)"
+  }
+}

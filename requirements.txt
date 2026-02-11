@@ -1,0 +1,15 @@
+# Core dependencies for OAuth device code flow
+msal>=1.24.0
+
+# Secure token storage in macOS Keychain
+keyring>=24.0.0
+
+# Cryptography for token encryption
+cryptography>=41.0.0
+
+# Optional: For testing
+pytest>=7.4.0
+pytest-cov>=4.0.0
+
+# Development (not required for production)
+python-dotenv>=1.0.0

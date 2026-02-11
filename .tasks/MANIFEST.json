@@ -1,0 +1,222 @@
+{
+  "project_id": "PROJ-2026-0210-novotechno-collections",
+  "phase": "EXECUTION",
+  "created": "2026-02-11T13:00:00Z",
+  "project_lead": "project-lead-novotechno",
+  "qa_engineer": "qa-engineer-novotechno",
+  "agents": [
+    "project-lead-novotechno",
+    "qa-engineer-novotechno",
+    "scribe-novotechno",
+    "git-commit-agent-novotechno",
+    "python-cli-dev-novotechno",
+    "operations-agent-novotechno"
+  ],
+  "critical_conditions": [
+    "C-001: OAuth device code flow (MSAL, no browser agent)",
+    "C-002: Token bucket rate limiting (20/cycle, 100/day)",
+    "C-003: fsevents filesystem monitoring (payment detection <30s)",
+    "C-004: Sleep/wake robustness (caffeinate + Power Nap)",
+    "C-005: Atomic state file writes (checksum + append-only log)",
+    "C-006: OAuth token refresh monitoring (<300s detection)",
+    "C-007: Filesystem permission pre-flight",
+    "C-008: OAuth token persistence validation (RESEARCH, 2h test)",
+    "C-009: PDF parsing confidence >0.9 (RESEARCH, 5 invoices)",
+    "C-010: Spanish template native review (external, 0.5h)"
+  ],
+  "tasks": {
+    "TASK_001": {
+      "agent": "project-lead-novotechno",
+      "file": "TASK_001_project-lead.md",
+      "depends": [],
+      "type": "decomposition",
+      "state": "COMPLETE"
+    },
+    "TASK_OAUTH_001": {
+      "agent": "operations-agent-novotechno",
+      "file": "TASK_OAUTH_001_operations-agent.md",
+      "depends": [
+        "TASK_001"
+      ],
+      "type": "implementation",
+      "state": "COMPLETE",
+      "completedAt": "2026-02-11T10:00:47"
+    },
+    "TASK_OAUTH_002": {
+      "agent": "operations-agent-novotechno",
+      "file": "TASK_OAUTH_002_operations-agent.md",
+      "depends": [
+        "TASK_OAUTH_001"
+      ],
+      "type": "implementation",
+      "state": "COMPLETE",
+      "retryCount": 1,
+      "lastRetryAt": "2026-02-11T10:01:01",
+      "dispatchPid": 69029,
+      "dispatchedAt": "2026-02-11T10:01:01",
+      "guardFailReason": "timeout_pid_dead",
+      "completedAt": "2026-02-11T10:04:18"
+    },
+    "TASK_PDF_001": {
+      "agent": "python-cli-dev-novotechno",
+      "file": "TASK_PDF_001_python-cli-dev.md",
+      "depends": [
+        "TASK_001"
+      ],
+      "type": "implementation",
+      "state": "COMPLETE",
+      "completedAt": "2026-02-11T10:00:47"
+    },
+    "TASK_PDF_002": {
+      "agent": "python-cli-dev-novotechno",
+      "file": "TASK_PDF_002_python-cli-dev.md",
+      "depends": [
+        "TASK_PDF_001"
+      ],
+      "type": "implementation",
+      "state": "COMPLETE",
+      "completedAt": "2026-02-11T10:01:17"
+    },
+    "TASK_CLI_001": {
+      "agent": "python-cli-dev-novotechno",
+      "file": "TASK_CLI_001_python-cli-dev.md",
+      "depends": [
+        "TASK_OAUTH_002",
+        "TASK_PDF_002"
+      ],
+      "type": "implementation",
+      "state": "COMPLETE",
+      "dispatchedAt": "2026-02-11T11:22:53",
+      "dispatchPid": 71805,
+      "responseFile": "TASK_CLI_001_python-cli-dev-novotechno_RESPONSE.md",
+      "retryCount": 0,
+      "completedAt": "2026-02-11T11:42:48"
+    },
+    "TASK_CLI_002": {
+      "agent": "python-cli-dev-novotechno",
+      "file": "TASK_CLI_002_python-cli-dev.md",
+      "depends": [
+        "TASK_PDF_002"
+      ],
+      "type": "implementation",
+      "state": "COMPLETE",
+      "responseFile": "TASK_CLI_002_python-cli-dev-novotechno_RESPONSE.md",
+      "retryCount": 2,
+      "lastRetryAt": "2026-02-11T11:59:27",
+      "dispatchPid": 73403,
+      "dispatchedAt": "2026-02-11T11:59:27",
+      "guardFailReason": "max_retries_exceeded (pid_dead)",
+      "completedAt": "2026-02-11T12:06:38"
+    },
+    "TASK_CLI_003": {
+      "agent": "python-cli-dev-novotechno",
+      "file": "TASK_CLI_003_python-cli-dev.md",
+      "depends": [
+        "TASK_CLI_001",
+        "TASK_CLI_002"
+      ],
+      "type": "implementation",
+      "state": "COMPLETE",
+      "responseFile": "TASK_CLI_003_python-cli-dev-novotechno_RESPONSE.md",
+      "retryCount": 0,
+      "completedAt": "2026-02-11T12:56:07"
+    },
+    "TASK_QA_001": {
+      "agent": "qa-engineer-novotechno",
+      "file": "TASK_QA_001_qa-engineer.md",
+      "depends": [
+        "TASK_OAUTH_002"
+      ],
+      "type": "validation",
+      "state": "COMPLETE",
+      "dispatchedAt": "2026-02-11T11:22:53",
+      "dispatchPid": 71830,
+      "responseFile": "TASK_QA_001_qa-engineer-novotechno_RESPONSE.md",
+      "retryCount": 0,
+      "completedAt": "2026-02-11T11:32:19"
+    },
+    "TASK_QA_002": {
+      "agent": "qa-engineer-novotechno",
+      "file": "TASK_QA_002_qa-engineer.md",
+      "depends": [
+        "TASK_PDF_001"
+      ],
+      "type": "validation",
+      "state": "COMPLETE",
+      "responseFile": "TASK_QA_002_qa-engineer-novotechno_RESPONSE.md",
+      "retryCount": 1,
+      "lastRetryAt": "2026-02-11T11:57:57",
+      "dispatchPid": 73233,
+      "dispatchedAt": "2026-02-11T11:57:57",
+      "guardFailReason": "timeout_pid_dead",
+      "completedAt": "2026-02-11T11:58:27"
+    },
+    "TASK_QA_003": {
+      "agent": "qa-engineer-novotechno",
+      "file": "TASK_QA_003_qa-engineer.md",
+      "depends": [
+        "TASK_CLI_001",
+        "TASK_CLI_002",
+        "TASK_CLI_003"
+      ],
+      "type": "validation",
+      "state": "COMPLETE",
+      "responseFile": "TASK_QA_003_qa-engineer-novotechno_RESPONSE.md",
+      "retryCount": 0,
+      "completedAt": "2026-02-11T14:24:25"
+    },
+    "TASK_DOCS_001": {
+      "agent": "scribe-novotechno",
+      "file": "TASK_DOCS_001_scribe.md",
+      "depends": [
+        "TASK_OAUTH_001",
+        "TASK_OAUTH_002"
+      ],
+      "type": "documentation",
+      "state": "COMPLETE",
+      "dispatchedAt": "2026-02-11T11:22:53",
+      "dispatchPid": 71854,
+      "responseFile": "TASK_DOCS_001_scribe-novotechno_RESPONSE.md",
+      "retryCount": 0,
+      "completedAt": "2026-02-11T11:24:23"
+    },
+    "TASK_GIT_001": {
+      "agent": "git-commit-agent-novotechno",
+      "file": "TASK_GIT_001_git-commit-agent.md",
+      "depends": [
+        "TASK_QA_001",
+        "TASK_QA_002",
+        "TASK_QA_003"
+      ],
+      "type": "release",
+      "state": "DISPATCHED",
+      "responseFile": "TASK_GIT_001_git-commit-agent-novotechno_RESPONSE.md",
+      "retryCount": 0
+    }
+  },
+  "critical_path": [
+    "TASK_001",
+    "TASK_OAUTH_001",
+    "TASK_OAUTH_002",
+    "TASK_PDF_001",
+    "TASK_PDF_002",
+    "TASK_CLI_001",
+    "TASK_CLI_002",
+    "TASK_CLI_003",
+    "TASK_QA_001",
+    "TASK_QA_002",
+    "TASK_QA_003",
+    "TASK_GIT_001"
+  ],
+  "total_tasks": 14,
+  "estimated_duration": "22.5 hours",
+  "patterns_to_extract": [
+    "PAT-065: Agent Heartbeat Protocol",
+    "PAT-066: Event-Driven Agent Coordination",
+    "PAT-067: Confidence-Based Validation Pipeline"
+  ],
+  "version": 1,
+  "metadata": {
+    "lastModified": "2026-02-11T14:24:55"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "invoice_number": "INV-2024-001",
+  "client_name": "ACME Corporation",
+  "amount": 1500.0,
+  "due_date": "2024-03-15",
+  "items": [
+    {"description": "Consulting Services", "quantity": 10, "price": 100.0},
+    {"description": "Software License", "quantity": 1, "price": 500.0}
+  ],
+  "confidence": 0.95,
+  "expected_route": "auto",
+  "pdf_content": "Invoice #: INV-2024-001\\nBill To:\\nACME Corporation\\nTotal: $1,500.00\\nDue Date: 03/15/2024"
+}
